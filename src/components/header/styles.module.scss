@@ -1,16 +1,70 @@
-header{
-    background-color: blue;
-    height: 100px;
+header {
+    // background-color: transparent;
+    background-color: chocolate;
+    height: 96px;
     width: 100%;
-    ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1.5px solid #FFFFFF;
+    .warrapImg {
         display: flex;
-        gap: 10px;
-        li{
+        align-items: center;
+        .logoImg {
+            margin-right: 112px;
+        }
+    }
+    ul {
+        display: flex;
+        gap: 58px;
+        li {
             list-style: none;
-            a{
+
+            a {
                 text-decoration: none;
-                color: black;   
+                color: black;
+                &:hover{
+                    cursor: pointer;
+                }
             }
+            img {
+                margin-left: 14px;
+            }
+        }
+    }
+    .warrapButton {
+        display: flex;
+        gap: 16px;
+        > button {
+            width: 115px;
+            height: 40px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.3125rem;
+
+            text-align: center;
+
+            color: #ffffff;
+            transition: 0.3s ease-in-out;
+            
+            &:hover{
+                scale: 90%;
+                cursor: pointer;
+            }
+        }
+        > .criarContaBtn {
+            border: 0.78px solid #ffffff;
+            border-radius: 3px;
+            background-color: transparent;
+        }
+        > .logarBtn {
+            display: flex;
+            padding: 10px 25px;
+            gap: 6px;
+
+            background: #00aeff;
+            border-color: #00aeff;
+            border-radius: 3px;
         }
     }
 }

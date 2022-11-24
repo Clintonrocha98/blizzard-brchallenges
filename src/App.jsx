@@ -1,7 +1,15 @@
-import "./App.css";
+import { Header } from "./components/header";
+
+import style from "./components/style/style.module.scss";
 
 function App() {
-    return console.log("hi");
+    return (
+        <>
+            <main className={style.container}>
+                <Header></Header>
+            </main>
+        </>
+    );
 }
 
 export default App;

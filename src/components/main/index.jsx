@@ -11,16 +11,17 @@ export function Main({ className, children }) {
             {children}
             <main className={className}>
                 <aside>
-                    {gameData.forEach((game) => (
+                    {gameData.map((game) => (
                         <>
-                            <button
+                            <img
+                                src={game.iconoff}
+                                alt="icone do jogo"
                                 onClick={() =>
                                     handleClick(gameData.indexOf(game))
                                 }
-                            >
-                                <img src={game.iconoff} alt="icone do jogo" />
-                                EU TO FICANDO MALUCO
-                            </button>
+                                key={game.id}
+                            />
+                            {console.log(game.id)}
                         </>
                     ))}
                 </aside>

@@ -18,6 +18,7 @@ import wowgiff from "../../assets/giff-games/wow-giff.gif";
 
 const gameData = [
     {
+        id: 0,
         name: "Diablo IV",
         title: "Retorna à escuridão com o game Diablo IV",
         description:
@@ -29,6 +30,7 @@ const gameData = [
         giff: diablogiff,
     },
     {
+        id: 1,
         name: "Hearthstone",
         title: "Novo pacote de expansão de Hearthstone",
         description:
@@ -40,6 +42,7 @@ const gameData = [
         giff: hearthstonegiff,
     },
     {
+        id: 2,
         name: "WOW",
         title: "Desbrave as Terras Sombrias em Shadowlands!",
         description: "O que jaz além do mundo que você conhece?",
@@ -50,9 +53,11 @@ const gameData = [
         giff: wowgiff,
     },
     {
+        id: 3,
         iconoff: diablooff,
     },
     {
+        id: 4,
         iconoff: starcraftoff,
     },
 ];

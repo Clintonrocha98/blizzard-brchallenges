@@ -5,7 +5,7 @@ import iconsUp from "../../assets/iconUp.png";
 import blizzard from "../../assets/logo-blizzard.png";
 import iconLogar from "../../assets/logar-icon.png";
 
-export function Header() {
+export function Header({ className }) {
     let [arrowJogo, NewarrowJogo] = useState(iconsDown);
 
     function ArrowclickJogo() {
@@ -28,28 +28,32 @@ export function Header() {
     }
     return (
         <>
-            <header className={styles.header}>
+            <header className={`${className} ${styles.warrapHeader}`}>
                 <div className={styles.warrapImg}>
-                    <img className={styles.logoImg} src={blizzard} alt="icone da blizzard" />
-                <ul>
-                    <li onClick={ArrowclickJogo}>
-                        <a href="#">Jogos</a>
-                        <img src={arrowJogo} alt="arrow" />
-                    </li>
-                    <li onClick={ArrowclickEsport}>
-                        <a href="#">Esports</a>
-                        <img src={arrowEsport} alt="arrow" />
-                    </li>
-                    <li>
-                        <a href="#">Loja</a>
-                    </li>
-                    <li>
-                        <a href="#">Notícias</a>
-                    </li>
-                    <li>
-                        <a href="#">Suporte</a>
-                    </li>
-                </ul>
+                    <img
+                        className={styles.logoImg}
+                        src={blizzard}
+                        alt="icone da blizzard"
+                    />
+                    <ul>
+                        <li onClick={ArrowclickJogo}>
+                            <a href="#">Jogos</a>
+                            <img src={arrowJogo} alt="arrow" />
+                        </li>
+                        <li onClick={ArrowclickEsport}>
+                            <a href="#">Esports</a>
+                            <img src={arrowEsport} alt="arrow" />
+                        </li>
+                        <li>
+                            <a href="#">Loja</a>
+                        </li>
+                        <li>
+                            <a href="#">Notícias</a>
+                        </li>
+                        <li>
+                            <a href="#">Suporte</a>
+                        </li>
+                    </ul>
                 </div>
                 <div className={styles.warrapButton}>
                     <button className={styles.criarContaBtn}>Crir conta</button>

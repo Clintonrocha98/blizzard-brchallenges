@@ -1,4 +1,4 @@
-header {
+.warrapHeader {
     // background-color: transparent;
     background-color: chocolate;
     height: 96px;
@@ -6,7 +6,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1.5px solid #FFFFFF;
+    border-bottom: 1.5px solid #ffffff;
     .warrapImg {
         display: flex;
         align-items: center;
@@ -23,7 +23,7 @@ header {
             a {
                 text-decoration: none;
                 color: black;
-                &:hover{
+                &:hover {
                     cursor: pointer;
                 }
             }
@@ -46,8 +46,8 @@ header {
 
             color: #ffffff;
             transition: 0.3s ease-in-out;
-            
-            &:hover{
+
+            &:hover {
                 scale: 90%;
                 cursor: pointer;
             }

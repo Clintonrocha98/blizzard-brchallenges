@@ -16,10 +16,18 @@ import diablogiff from "../../assets/giff-games/diabloIV-giff.gif";
 import hearthstonegiff from "../../assets/giff-games/hearthstone-giff.gif";
 import wowgiff from "../../assets/giff-games/wow-giff.gif";
 
+import diabloivstatic from '../../assets/static-games/diabloIV-static.png'
+import hearthstonestatic from '../../assets/static-games/hearthstone-static.png'
+import wowstatic from '../../assets/static-games/wow-static.png'
+
+import diabloivbg from '../../assets/background/bg-diablo.png'
+import hearthstonebg from '../../assets/background/bg-hearthstone.png'
+import wowbg from '../../assets/background/bg-lk.png'
+
 const gameData = [
     {
         id: 0,
-        name: "Diablo IV",
+        name: "DiabloIV",
         title: "Retorna à escuridão com o game Diablo IV",
         description:
             "O retorno de Lilith traz uma era de escuridão e sofrimento",
@@ -28,6 +36,9 @@ const gameData = [
         iconoff: diabloivoff,
         logo: diabloivLogo,
         giff: diablogiff,
+        static: diabloivstatic,
+        bg: diabloivbg,
+        
     },
     {
         id: 1,
@@ -40,6 +51,8 @@ const gameData = [
         iconoff: hearthstoneoff,
         logo: hearthstoneLogo,
         giff: hearthstonegiff,
+        static: hearthstonestatic,
+        bg: hearthstonebg,
     },
     {
         id: 2,
@@ -51,6 +64,8 @@ const gameData = [
         iconoff: wowoff,
         logo: wowLogo,
         giff: wowgiff,
+        static: wowstatic,
+        bg: wowbg,
     },
     {
         id: 3,
@@ -63,3 +78,4 @@ const gameData = [
 ];
 
 export default gameData;
+

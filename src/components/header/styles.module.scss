@@ -1,12 +1,16 @@
-.warrapHeader {
-    // background-color: transparent;
-    background-color: chocolate;
-    height: 96px;
+header {
     width: 100%;
+    height: 96px;
+    background-color: transparent;
+    position: absolute;
+    border-bottom: 1.5px solid #ffffff;
+}
+.warrapHeader {
     display: flex;
+    height: 100%;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1.5px solid #ffffff;
+    
     .warrapImg {
         display: flex;
         align-items: center;

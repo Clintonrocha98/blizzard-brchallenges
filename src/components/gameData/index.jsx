@@ -16,13 +16,13 @@ import diablogiff from "../../assets/giff-games/diabloIV-giff.gif";
 import hearthstonegiff from "../../assets/giff-games/hearthstone-giff.gif";
 import wowgiff from "../../assets/giff-games/wow-giff.gif";
 
-import diabloivstatic from '../../assets/static-games/diabloIV-static.png'
-import hearthstonestatic from '../../assets/static-games/hearthstone-static.png'
-import wowstatic from '../../assets/static-games/wow-static.png'
+import diabloivstatic from "../../assets/static-games/diabloIV-static.png";
+import hearthstonestatic from "../../assets/static-games/hearthstone-static.png";
+import wowstatic from "../../assets/static-games/wow-static.png";
 
-import diabloivbg from '../../assets/background/bg-diablo.png'
-import hearthstonebg from '../../assets/background/bg-hearthstone.png'
-import wowbg from '../../assets/background/bg-lk.png'
+import diabloivbg from "../../assets/background/bg-diablo.png";
+import hearthstonebg from "../../assets/background/bg-hearthstone.png";
+import wowbg from "../../assets/background/bg-lk.png";
 
 const gameData = [
     {
@@ -32,13 +32,11 @@ const gameData = [
         description:
             "O retorno de Lilith traz uma era de escuridão e sofrimento",
         btntext: "Jogue agora",
-        iconon: diabloiv,
-        iconoff: diabloivoff,
+        icon: [diabloivoff, diabloiv],
         logo: diabloivLogo,
         giff: diablogiff,
         static: diabloivstatic,
         bg: diabloivbg,
-        
     },
     {
         id: 1,
@@ -47,8 +45,7 @@ const gameData = [
         description:
             "A Horda e a Aliança se encontraram no Vale Alterac para lutar",
         btntext: "Reserve agora na pré-venda",
-        iconon: hearthstone,
-        iconoff: hearthstoneoff,
+        icon: [hearthstone, hearthstoneoff],
         logo: hearthstoneLogo,
         giff: hearthstonegiff,
         static: hearthstonestatic,
@@ -60,8 +57,7 @@ const gameData = [
         title: "Desbrave as Terras Sombrias em Shadowlands!",
         description: "O que jaz além do mundo que você conhece?",
         btntext: "Reserve agora na pré-venda",
-        iconon: wow,
-        iconoff: wowoff,
+        icon: [wow, wowoff],
         logo: wowLogo,
         giff: wowgiff,
         static: wowstatic,
@@ -69,13 +65,12 @@ const gameData = [
     },
     {
         id: 3,
-        iconoff: diablooff,
+        icon: [,diablooff],
     },
     {
         id: 4,
-        iconoff: starcraftoff,
+        icon: [,starcraftoff],
     },
 ];
 
 export default gameData;
-

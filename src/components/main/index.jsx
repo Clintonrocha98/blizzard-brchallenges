@@ -1,6 +1,7 @@
 import gameData from "../gameData";
 import { useState } from "react";
 import styles from "./styles.module.scss";
+
 export function Main({ className, children }) {
     const [gameContent, attGame] = useState(gameData[0]);
 
@@ -8,7 +9,6 @@ export function Main({ className, children }) {
         if (id >= 3) {
             return;
         }
-
         attGame(gameData[id]);
     }
     function handleEnter(e) {
@@ -16,6 +16,18 @@ export function Main({ className, children }) {
     }
     function handleOut(e) {
         e.target.setAttribute("src", gameContent.static);
+    }
+    function handleIcon(e, arr, id) {
+        handleClick(id);
+        const urlAtual = location.href.slice(0, -1) + arr.icon[0];
+
+        if (id < 3) {
+            if (e.target.src === urlAtual) {
+                e.target.setAttribute("src", arr.icon[1]);
+            } else {
+                e.target.setAttribute("src", arr.icon[0]);
+            }
+        }
     }
     return (
         <>
@@ -29,12 +41,10 @@ export function Main({ className, children }) {
                     <aside className={styles.left}>
                         {gameData.map((game) => (
                             <img
-                                src={game.iconoff}
+                                src={game.icon[1]}
                                 key={game.id}
                                 alt="icone do jogo"
-                                onClick={() =>
-                                    handleClick(gameData.indexOf(game))
-                                }
+                                onClick={(e) => handleIcon(e, game, game.id)}
                             />
                         ))}
                     </aside>

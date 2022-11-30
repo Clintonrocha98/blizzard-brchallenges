@@ -38,22 +38,16 @@ export function Header({ className }) {
                         />
                         <ul>
                             <li onClick={ArrowclickJogo}>
-                                <a href="#">Jogos</a>
+                                Jogos
                                 <img src={arrowJogo} alt="arrow" />
                             </li>
                             <li onClick={ArrowclickEsport}>
-                                <a href="#">Esports</a>
+                                Esports
                                 <img src={arrowEsport} alt="arrow" />
                             </li>
-                            <li>
-                                <a href="#">Loja</a>
-                            </li>
-                            <li>
-                                <a href="#">Notícias</a>
-                            </li>
-                            <li>
-                                <a href="#">Suporte</a>
-                            </li>
+                            <li>Loja</li>
+                            <li>Notícias</li>
+                            <li>Suporte</li>
                         </ul>
                     </div>
                     <div className={styles.warrapButton}>

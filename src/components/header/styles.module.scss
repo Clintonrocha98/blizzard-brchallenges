@@ -10,7 +10,7 @@ header {
     height: 100%;
     align-items: center;
     justify-content: space-between;
-    
+
     .warrapImg {
         display: flex;
         align-items: center;
@@ -24,12 +24,17 @@ header {
         li {
             list-style: none;
 
-            a {
-                text-decoration: none;
-                color: black;
-                &:hover {
-                    cursor: pointer;
-                }
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.31rem;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            &:hover {
+                color: #00aeff;
+                cursor: pointer;
             }
             img {
                 margin-left: 14px;

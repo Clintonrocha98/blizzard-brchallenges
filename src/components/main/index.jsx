@@ -6,9 +6,6 @@ export function Main({ className, children }) {
     const [btn1, attBtn1] = useState(0);
     const [btn2, attBtn2] = useState(1);
     const [btn3, attBtn3] = useState(1);
-    // let btn1 = 0;
-    // let btn2 = 1;
-    // let btn3 = 1;
 
     function handleClick(id) {
         if (id >= 3) {
@@ -66,64 +63,65 @@ export function Main({ className, children }) {
             <div
                 className={styles.banner}
                 style={{ backgroundImage: `url(${gameContent.bg})` }}
-            ></div>
-            <main className={className}>
-                <div className={styles.warrapMain}>
-                    <aside className={styles.left}>
-                        <img
-                            src={gameData[0].icon[btn1]}
-                            key={gameData[0].id}
-                            alt="icone do jogo"
-                            onClick={(e) => handleIcon(e, gameData[0].id)}
-                        />
-                        <img
-                            src={gameData[1].icon[btn2]}
-                            key={gameData[1].id}
-                            alt="icone do jogo"
-                            onClick={(e) => handleIcon(e, gameData[1].id)}
-                        />
-                        <img
-                            src={gameData[2].icon[btn3]}
-                            key={gameData[2].id}
-                            alt="icone do jogo"
-                            onClick={(e) => handleIcon(e, gameData[2].id)}
-                        />
-                        <img
-                            src={gameData[3].icon[1]}
-                            key={gameData[3].id}
-                            alt="icone do jogo"
-                        />
-                        <img
-                            src={gameData[4].icon[1]}
-                            key={gameData[4].id}
-                            alt="icone do jogo"
-                        />
-                    </aside>
-                    <div className={styles.warrapTitle}>
-                        <h1>{gameContent.title}</h1>
-                        <p>{gameContent.description}</p>
-                        <button>{gameContent.btntext}</button>
+            >
+                <main className={className}>
+                    <div className={styles.warrapMain}>
+                        <aside className={styles.left}>
+                            <img
+                                src={gameData[0].icon[btn1]}
+                                key={gameData[0].id}
+                                alt="icone do jogo"
+                                onClick={(e) => handleIcon(e, gameData[0].id)}
+                            />
+                            <img
+                                src={gameData[1].icon[btn2]}
+                                key={gameData[1].id}
+                                alt="icone do jogo"
+                                onClick={(e) => handleIcon(e, gameData[1].id)}
+                            />
+                            <img
+                                src={gameData[2].icon[btn3]}
+                                key={gameData[2].id}
+                                alt="icone do jogo"
+                                onClick={(e) => handleIcon(e, gameData[2].id)}
+                            />
+                            <img
+                                src={gameData[3].icon[1]}
+                                key={gameData[3].id}
+                                alt="icone do jogo"
+                            />
+                            <img
+                                src={gameData[4].icon[1]}
+                                key={gameData[4].id}
+                                alt="icone do jogo"
+                            />
+                        </aside>
+                        <div className={styles.warrapTitle}>
+                            <h1>{gameContent.title}</h1>
+                            <p>{gameContent.description}</p>
+                            <button>{gameContent.btntext}</button>
+                        </div>
+                        <aside>
+                            <div className={styles.logo}>
+                                <img
+                                    src={gameContent.logo}
+                                    alt={gameContent.name + " logo"}
+                                    key={gameContent.id}
+                                />
+                            </div>
+                            <div className={styles.trailer}>
+                                <p>assista o trailer</p>
+                                <img
+                                    onMouseEnter={handleEnter}
+                                    onMouseLeave={handleOut}
+                                    src={gameContent.static}
+                                    alt={gameContent.name + " trailer"}
+                                />
+                            </div>
+                        </aside>
                     </div>
-                    <aside>
-                        <div className={styles.logo}>
-                            <img
-                                src={gameContent.logo}
-                                alt={gameContent.name + " logo"}
-                                key={gameContent.id}
-                            />
-                        </div>
-                        <div className={styles.trailer}>
-                            <p>assista o trailer</p>
-                            <img
-                                onMouseEnter={handleEnter}
-                                onMouseLeave={handleOut}
-                                src={gameContent.static}
-                                alt={gameContent.name + " trailer"}
-                            />
-                        </div>
-                    </aside>
-                </div>
-            </main>
+                </main>
+            </div>
         </>
     );
 }

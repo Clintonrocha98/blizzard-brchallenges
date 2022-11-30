@@ -4,6 +4,7 @@ header {
     background-color: transparent;
     position: absolute;
     border-bottom: 1.5px solid #ffffff;
+    z-index: 2;
 }
 .warrapHeader {
     display: flex;

@@ -1,0 +1,76 @@
+.menu {
+    background-image: url("../../assets/bg-menu.png");
+    background-size: cover;
+    padding-top: 134px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        width: 70%;
+        margin: 0 auto;
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            padding: 20px;
+            img{
+                &:hover {
+                    cursor: pointer;
+                    border-radius: 999px;
+                    background-color: #9d9d9d26;
+                    scale: 1.1;
+                }
+            }
+        }
+        
+        p {
+            margin-top: 10px;
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 120%;
+
+            color: #9d9d9d;
+        }
+    }
+}
+.warrapButton {
+    height: 70px;
+    width: 100%;
+
+    background: #15171b;
+    opacity: 0.7;
+    > div {
+        display: flex;
+        height: 100%;
+        gap: 55px;
+        align-items: center;
+        justify-content: center;
+    }
+    button {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border-color: transparent;
+
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.5rem;
+
+        color: #ffffff;
+
+        > img {
+            margin-right: 10px;
+        }
+        &:hover{
+            cursor: pointer;
+            scale: 1.1;
+        }
+    }
+}

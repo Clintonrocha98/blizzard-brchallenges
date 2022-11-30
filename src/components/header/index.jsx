@@ -4,11 +4,14 @@ import iconsDown from "../../assets/iconDown.png";
 import iconsUp from "../../assets/iconUp.png";
 import blizzard from "../../assets/logo-blizzard.png";
 import iconLogar from "../../assets/logar-icon.png";
+import { MenuGames } from "../menuGames";
 
 export function Header({ className }) {
+    const [menu, attMenu] = useState(<></>)
     let [arrowJogo, NewarrowJogo] = useState(iconsDown);
 
     function ArrowclickJogo() {
+        attMenu(<MenuGames></MenuGames>)
         if (arrowJogo === iconsDown) {
             arrowJogo = iconsUp;
         } else {
@@ -64,6 +67,7 @@ export function Header({ className }) {
                     </div>
                 </div>
             </header>
+            {menu}
         </>
     );
 }

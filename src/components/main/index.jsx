@@ -1,8 +1,14 @@
 import gameData from "../gameData";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./styles.module.scss";
 export function Main({ className, children }) {
     const [gameContent, attGame] = useState(gameData[0]);
+    const [btn1, attBtn1] = useState(0);
+    const [btn2, attBtn2] = useState(1);
+    const [btn3, attBtn3] = useState(1);
+    // let btn1 = 0;
+    // let btn2 = 1;
+    // let btn3 = 1;
 
     function handleClick(id) {
         if (id >= 3) {
@@ -17,16 +23,41 @@ export function Main({ className, children }) {
     function handleOut(e) {
         e.target.setAttribute("src", gameContent.static);
     }
-    function handleIcon(e, arr, id) {
+    function handleIcon(e, id) {
         handleClick(id);
-        const urlAtual = location.href.slice(0, -1) + arr.icon[0];
 
-        if (id < 3) {
-            if (e.target.src === urlAtual) {
-                e.target.setAttribute("src", arr.icon[1]);
-            } else {
-                e.target.setAttribute("src", arr.icon[0]);
-            }
+        if (
+            e.target.src === location.href.slice(0, -1) + gameData[0].icon[1] &&
+            e.target.src !== location.href.slice(0, -1) + gameData[1].icon[1] &&
+            e.target.src !== location.href.slice(0, -1) + gameData[2].icon[1]
+        ) {
+            attBtn1(0);
+            attBtn2(1);
+            attBtn3(1);
+
+            e.target.setAttribute("src", gameData[0].icon[0]);
+        }
+        if (
+            e.target.src !== location.href.slice(0, -1) + gameData[0].icon[1] &&
+            e.target.src === location.href.slice(0, -1) + gameData[1].icon[1] &&
+            e.target.src !== location.href.slice(0, -1) + gameData[2].icon[1]
+        ) {
+            attBtn1(1);
+            attBtn2(0);
+            attBtn3(1);
+
+            e.target.setAttribute("src", gameData[1].icon[0]);
+        }
+        if (
+            e.target.src !== location.href.slice(0, -1) + gameData[0].icon[1] &&
+            e.target.src !== location.href.slice(0, -1) + gameData[1].icon[1] &&
+            e.target.src === location.href.slice(0, -1) + gameData[2].icon[1]
+        ) {
+            attBtn1(1);
+            attBtn2(1);
+            attBtn3(0);
+
+            e.target.setAttribute("src", gameData[2].icon[0]);
         }
     }
     return (
@@ -39,14 +70,34 @@ export function Main({ className, children }) {
             <main className={className}>
                 <div className={styles.warrapMain}>
                     <aside className={styles.left}>
-                        {gameData.map((game) => (
-                            <img
-                                src={game.icon[1]}
-                                key={game.id}
-                                alt="icone do jogo"
-                                onClick={(e) => handleIcon(e, game, game.id)}
-                            />
-                        ))}
+                        <img
+                            src={gameData[0].icon[btn1]}
+                            key={gameData[0].id}
+                            alt="icone do jogo"
+                            onClick={(e) => handleIcon(e, gameData[0].id)}
+                        />
+                        <img
+                            src={gameData[1].icon[btn2]}
+                            key={gameData[1].id}
+                            alt="icone do jogo"
+                            onClick={(e) => handleIcon(e, gameData[1].id)}
+                        />
+                        <img
+                            src={gameData[2].icon[btn3]}
+                            key={gameData[2].id}
+                            alt="icone do jogo"
+                            onClick={(e) => handleIcon(e, gameData[2].id)}
+                        />
+                        <img
+                            src={gameData[3].icon[1]}
+                            key={gameData[3].id}
+                            alt="icone do jogo"
+                        />
+                        <img
+                            src={gameData[4].icon[1]}
+                            key={gameData[4].id}
+                            alt="icone do jogo"
+                        />
                     </aside>
                     <div className={styles.warrapTitle}>
                         <h1>{gameContent.title}</h1>

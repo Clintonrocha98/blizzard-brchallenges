@@ -5,18 +5,30 @@ import iconsUp from "../../assets/iconUp.png";
 import blizzard from "../../assets/logo-blizzard.png";
 import iconLogar from "../../assets/logar-icon.png";
 import { MenuGames } from "../menuGames";
+import { MenuEsports } from "../menuEsports";
 
 export function Header({ className }) {
     const [menu, attMenu] = useState(false);
+    const [esports, attEsports] = useState(false);
     const [arrowJogo, NewarrowJogo] = useState(false);
     const [arrowEsport, NewarrowEsport] = useState(false);
 
     function ArrowclickJogo() {
+        if (esports) {
+            attEsports(!esports);
+            NewarrowEsport(!arrowEsport);
+        }
         attMenu(!menu);
+
         NewarrowJogo(!arrowJogo);
     }
 
     function ArrowclickEsport() {
+        if (menu) {
+            attMenu(!menu);
+            NewarrowJogo(!arrowJogo);
+        }
+        attEsports(!esports);
         NewarrowEsport(!arrowEsport);
     }
     return (
@@ -69,7 +81,16 @@ export function Header({ className }) {
                     </div>
                 </div>
             </header>
-            {menu === true ? <MenuGames></MenuGames> : <></>}
+            {menu === true && esports === false ? (
+                <MenuGames></MenuGames>
+            ) : (
+                <></>
+            )}
+            {esports === true && menu === false ? (
+                <MenuEsports></MenuEsports>
+            ) : (
+                <></>
+            )}
         </>
     );
 }

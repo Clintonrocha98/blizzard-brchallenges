@@ -7,27 +7,17 @@ import iconLogar from "../../assets/logar-icon.png";
 import { MenuGames } from "../menuGames";
 
 export function Header({ className }) {
-    const [menu, attMenu] = useState(<></>)
-    let [arrowJogo, NewarrowJogo] = useState(iconsDown);
+    const [menu, attMenu] = useState(false);
+    const [arrowJogo, NewarrowJogo] = useState(false);
+    const [arrowEsport, NewarrowEsport] = useState(false);
 
     function ArrowclickJogo() {
-        attMenu(<MenuGames></MenuGames>)
-        if (arrowJogo === iconsDown) {
-            arrowJogo = iconsUp;
-        } else {
-            arrowJogo = iconsDown;
-        }
-        NewarrowJogo(arrowJogo);
+        attMenu(!menu);
+        NewarrowJogo(!arrowJogo);
     }
-    let [arrowEsport, NewarrowEsport] = useState(iconsDown);
 
     function ArrowclickEsport() {
-        if (arrowEsport === iconsDown) {
-            arrowEsport = iconsUp;
-        } else {
-            arrowEsport = iconsDown;
-        }
-        NewarrowEsport(arrowEsport);
+        NewarrowEsport(!arrowEsport);
     }
     return (
         <>
@@ -42,11 +32,23 @@ export function Header({ className }) {
                         <ul>
                             <li onClick={ArrowclickJogo}>
                                 Jogos
-                                <img src={arrowJogo} alt="arrow" />
+                                <img
+                                    src={
+                                        arrowJogo === true ? iconsUp : iconsDown
+                                    }
+                                    alt="arrow"
+                                />
                             </li>
                             <li onClick={ArrowclickEsport}>
                                 Esports
-                                <img src={arrowEsport} alt="arrow" />
+                                <img
+                                    src={
+                                        arrowEsport === true
+                                            ? iconsUp
+                                            : iconsDown
+                                    }
+                                    alt="arrow"
+                                />
                             </li>
                             <li>Loja</li>
                             <li>Notícias</li>
@@ -67,7 +69,7 @@ export function Header({ className }) {
                     </div>
                 </div>
             </header>
-            {menu}
+            {menu === true ? <MenuGames></MenuGames> : <></>}
         </>
     );
 }

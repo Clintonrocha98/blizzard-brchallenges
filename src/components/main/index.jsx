@@ -6,7 +6,6 @@ export function Main({ className, children }) {
     const [btn1, attBtn1] = useState(0);
     const [btn2, attBtn2] = useState(1);
     const [btn3, attBtn3] = useState(1);
-
     function handleClick(id) {
         if (id >= 3) {
             return;

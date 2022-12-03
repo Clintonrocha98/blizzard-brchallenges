@@ -1,0 +1,98 @@
+footer {
+    width: 100%;
+    height: 852px;
+    position: absolute;
+    .bg1 {
+        background-image: url("../../assets/footer-img/bg-footer1.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .bg2 {
+        background-image: url("../../assets/footer-img/bg-footer2.png");
+        background-size: 100%;
+        background-position: right;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        max-width: 1065.24px;
+        max-height: 609.84px;
+        z-index: -1;
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        margin-right: 50px;
+    }
+    .bg3 {
+        background-image: url("../../assets/footer-img/bg-footer3.png");
+        background-size: 100%;
+        background-position: right;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        max-width: 562.86px;
+        max-height: 346.19px;
+    }
+
+    .warrapFooterContent {
+        margin-top: 100px;
+        top: 0px;
+        position: absolute;
+        h2 {
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 110.2%;
+            color: #ffffff;
+            margin: 30px 0;
+        }
+        p {
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            font-size: 1.125rem;
+            line-height: 178.2%;
+
+            color: #828792;
+            margin: 12px 0px;
+            img {
+                margin-right: 16px;
+            }
+        }
+
+        button {
+            display: flex;
+            padding: 14px 32px;
+            gap: 8px;
+            margin: 40px 0;
+            width: 283px;
+            height: 52px;
+
+            background: #00aeff;
+            border-radius: 4px;
+
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 24px;
+
+            text-align: center;
+
+            color: #ffffff;
+            transition: 0.3s ease-in;
+            &:hover {
+                cursor: pointer;
+                scale: 0.9;
+            }
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+}

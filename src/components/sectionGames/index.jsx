@@ -6,6 +6,8 @@ import img2 from "../../assets/icons-section-games/2.png";
 import img3 from "../../assets/icons-section-games/3.png";
 import img4 from "../../assets/icons-section-games/4.png";
 import img5 from "../../assets/icons-section-games/ver-jogos.png";
+import img6 from "../../assets/icons1.png";
+import img7 from "../../assets/icons2.png";
 const icons = [
     {
         id: 0,
@@ -64,6 +66,10 @@ export function SectionGames({ className }) {
                                 </p>
                             </div>
                         ))}
+                        <div className={styles.lastCard}>
+                            <img src={img7} alt="logo blizzard" />
+                            <img src={img6} alt="logo ver todos os jogos" />
+                        </div>
                     </div>
                 </div>
             </section>

@@ -1,3 +1,4 @@
+import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { Main } from "./components/main";
 import { SectionGames } from "./components/sectionGames";
@@ -11,6 +12,7 @@ function App() {
                 <Header className={style.container}></Header>
             </Main>
             <SectionGames className={style.container}></SectionGames>
+            <Footer className={style.container}></Footer>
         </>
     );
 }

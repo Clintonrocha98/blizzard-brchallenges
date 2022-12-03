@@ -70,6 +70,27 @@
             opacity: 0.8;
         }
     }
+    .lastCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 301px;
+        height: 412.8px;
+        left: 999px;
+        top: 0px;
+
+        border: 1.6125px solid #212428;
+        border-radius: 4.3px;
+        img{
+            margin: 16px;
+            &:hover{
+                scale: 1.1;
+                cursor: pointer;
+            }
+        }
+        
+    }
 }
 @keyframes HoverImg {
     0% {

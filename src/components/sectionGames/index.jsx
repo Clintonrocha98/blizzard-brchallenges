@@ -1,13 +1,13 @@
 import apiGames from "../api/api-blizzard-games";
 import styles from "./styles.module.scss";
 
-import img1 from "../../assets/icons-section-games/1.png";
-import img2 from "../../assets/icons-section-games/2.png";
-import img3 from "../../assets/icons-section-games/3.png";
-import img4 from "../../assets/icons-section-games/4.png";
-import img5 from "../../assets/icons-section-games/ver-jogos.png";
-import img6 from "../../assets/icons1.png";
-import img7 from "../../assets/icons2.png";
+import img1 from "../../assets/icons-section-games/1.webp";
+import img2 from "../../assets/icons-section-games/2.webp";
+import img3 from "../../assets/icons-section-games/3.webp";
+import img4 from "../../assets/icons-section-games/4.webp";
+import img5 from "../../assets/icons-section-games/ver-jogos.webp";
+import img6 from "../../assets/icons1.webp";
+import img7 from "../../assets/icons2.webp";
 const icons = [
     {
         id: 0,
@@ -56,6 +56,7 @@ export function SectionGames({ className }) {
                                     }}
                                 >
                                     <img
+                                        loading="lazy"
                                         src={game.logo}
                                         alt={"logo do jogo" + game.name}
                                     />

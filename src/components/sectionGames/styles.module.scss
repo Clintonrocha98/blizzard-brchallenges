@@ -18,9 +18,13 @@
         display: flex;
         gap: 25px;
     }
-    img:hover {
-        cursor: pointer;
-        scale: 1.1;
+    img {
+        width: auto;
+        height: auto;
+        &:hover {
+            cursor: pointer;
+            scale: 1.1;
+        }
     }
 }
 .warrapCard {
@@ -47,6 +51,8 @@
                 animation: HoverImg 1s ease-in-out forwards;
             }
             img {
+                width: auto;
+                height: auto;
                 position: absolute;
                 bottom: 0;
                 left: 70px;
@@ -82,14 +88,15 @@
 
         border: 1.6125px solid #212428;
         border-radius: 4.3px;
-        img{
+        img {
+            width: auto;
+            height: auto;
             margin: 16px;
-            &:hover{
+            &:hover {
                 scale: 1.1;
                 cursor: pointer;
             }
         }
-        
     }
 }
 @keyframes HoverImg {

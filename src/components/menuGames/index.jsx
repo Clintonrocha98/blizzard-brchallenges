@@ -1,10 +1,10 @@
 import menuData from "../menuData";
 import styles from "./styles.module.scss";
 
-import pontinho from "../../assets/icons-menu/pontinhos-menu.png";
-import battle from "../../assets/icons-menu/battle-net.png";
-import iconDownload from "../../assets/icons-menu/icon-downloads.png";
-import iconChat from "../../assets/icons-menu/iconchat.png";
+import pontinho from "../../assets/icons-menu/pontinhos-menu.webp";
+import battle from "../../assets/icons-menu/battle-net.webp";
+import iconDownload from "../../assets/icons-menu/icon-downloads.webp";
+import iconChat from "../../assets/icons-menu/iconchat.webp";
 
 export function MenuGames() {
     return (

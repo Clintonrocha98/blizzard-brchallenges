@@ -30,6 +30,8 @@
             list-style: none;
             padding-bottom: 100px;
             img {
+                width: auto;
+                height: auto;
                 &:hover {
                     cursor: pointer;
                     border-radius: 100%;
@@ -76,6 +78,8 @@
         color: #ffffff;
 
         > img {
+            width: auto;
+            height: auto;
             margin-right: 10px;
         }
         &:hover {
@@ -98,5 +102,4 @@
         }
     }
 }
-// .downToUp {
-// }
+

@@ -6,15 +6,13 @@
     width: 100%;
     z-index: 1;
     animation: Up 1s;
-    
-    
+
     @keyframes Up {
         from {
             transform: translateY(-100%);
         }
         to {
             transform: translateY(0);
-            
         }
     }
 
@@ -78,6 +76,8 @@
         color: #ffffff;
 
         > img {
+            width: auto;
+            height: auto;
             margin-right: 10px;
         }
         &:hover {
@@ -100,5 +100,3 @@
         }
     }
 }
-// .downToUp {
-// }

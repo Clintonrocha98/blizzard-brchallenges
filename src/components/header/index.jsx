@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 import { useState } from "react";
 import iconsDown from "../../assets/iconDown.png";
 import iconsUp from "../../assets/iconUp.png";
-import blizzard from "../../assets/logo-blizzard.png";
+import blizzard from "../../assets/logo-blizzard.webp";
 import iconLogar from "../../assets/logar-icon.png";
 import { MenuGames } from "../menuGames";
 import { MenuEsports } from "../menuEsports";
@@ -37,6 +37,7 @@ export function Header({ className }) {
                 <div className={`${className} ${styles.warrapHeader}`}>
                     <div className={styles.warrapImg}>
                         <img
+                            loading="lazy"
                             className={styles.logoImg}
                             src={blizzard}
                             alt="icone da blizzard"

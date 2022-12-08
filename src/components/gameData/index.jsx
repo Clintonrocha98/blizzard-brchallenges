@@ -1,28 +1,28 @@
-import diabloiv from "../../assets/icons-games/diabloIV.png";
-import diabloivoff from "../../assets/icons-games/diabloIV-off.png";
-import hearthstone from "../../assets/icons-games/hearthstone.png";
-import hearthstoneoff from "../../assets/icons-games/hearthstone-off.png";
-import wow from "../../assets/icons-games/wow.png";
-import wowoff from "../../assets/icons-games/wow-off.png";
+import diabloiv from "../../assets/icons-games/diabloIV.webp";
+import diabloivoff from "../../assets/icons-games/diabloIV-off.webp";
+import hearthstone from "../../assets/icons-games/hearthstone.webp";
+import hearthstoneoff from "../../assets/icons-games/hearthstone-off.webp";
+import wow from "../../assets/icons-games/wow.webp";
+import wowoff from "../../assets/icons-games/wow-off.webp";
 
-import diablooff from "../../assets/icons-games/diablo-off.png";
-import starcraftoff from "../../assets/icons-games/starcraft-off.png";
+import diablooff from "../../assets/icons-games/diablo-off.webp";
+import starcraftoff from "../../assets/icons-games/starcraft-off.webp";
 
-import diabloivLogo from "../../assets/logo-game/diabloIV.png";
-import hearthstoneLogo from "../../assets/logo-game/hearthstone.png";
-import wowLogo from "../../assets/logo-game/wow.png";
+import diabloivLogo from "../../assets/logo-game/diabloIV.webp";
+import hearthstoneLogo from "../../assets/logo-game/hearthstone.webp";
+import wowLogo from "../../assets/logo-game/wow.webp";
 
 import diablogiff from "../../assets/giff-games/diabloIV-giff.gif";
 import hearthstonegiff from "../../assets/giff-games/hearthstone-giff.gif";
 import wowgiff from "../../assets/giff-games/wow-giff.gif";
 
-import diabloivstatic from "../../assets/static-games/diabloIV-static.png";
-import hearthstonestatic from "../../assets/static-games/hearthstone-static.png";
-import wowstatic from "../../assets/static-games/wow-static.png";
+import diabloivstatic from "../../assets/static-games/diabloIV-static.webp";
+import hearthstonestatic from "../../assets/static-games/hearthstone-static.webp";
+import wowstatic from "../../assets/static-games/wow-static.webp";
 
-import diabloivbg from "../../assets/background/bg-diablo.png";
-import hearthstonebg from "../../assets/background/bg-hearthstone.png";
-import wowbg from "../../assets/background/bg-lk.png";
+import diabloivbg from "../../assets/background/bg-diablo.webp";
+import hearthstonebg from "../../assets/background/bg-hearthstone.webp";
+import wowbg from "../../assets/background/bg-lk.webp";
 
 const gameData = [
     {

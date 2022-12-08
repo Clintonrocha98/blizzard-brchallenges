@@ -1,12 +1,12 @@
 import styles from "./styles.module.scss";
-import logoBattleNet from "../../assets/logo-battle-net.png";
-import logo1 from "../../assets/footer-img/1.png";
-import logo2 from "../../assets/footer-img/2.png";
-import logo3 from "../../assets/footer-img/3.png";
-import logo4 from "../../assets/footer-img/4.png";
-import linuxIcon from "../../assets/linux.png";
-import macIcon from "../../assets/mac.png";
-import windowsIcon from "../../assets/windows.png";
+import logoBattleNet from "../../assets/footer-img/logo-battle-net.webp";
+import logo1 from "../../assets/footer-img/1.webp";
+import logo2 from "../../assets/footer-img/2.webp";
+import logo3 from "../../assets/footer-img/3.webp";
+import logo4 from "../../assets/footer-img/4.webp";
+import linuxIcon from "../../assets/footer-img/linux.webp";
+import macIcon from "../../assets/footer-img/mac.webp";
+import windowsIcon from "../../assets/footer-img/windows.webp";
 
 export function Footer({ className }) {
     const win = navigator.userAgent.includes("Windows");

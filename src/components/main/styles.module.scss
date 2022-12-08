@@ -18,6 +18,8 @@ main {
     flex-direction: column;
     gap: 20px;
     img {
+        width: auto;
+        height: auto;
         &:hover {
             cursor: pointer;
             background-color: #6c6c6c38;

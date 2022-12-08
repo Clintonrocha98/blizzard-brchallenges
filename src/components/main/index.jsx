@@ -67,29 +67,34 @@ export function Main({ className, children }) {
                     <div className={styles.warrapMain}>
                         <aside className={styles.left}>
                             <img
+                                loading="lazy"
                                 src={gameData[0].icon[btn1]}
                                 key={gameData[0].id}
                                 alt="icone do jogo"
                                 onClick={(e) => handleIcon(e, gameData[0].id)}
                             />
                             <img
+                                loading="lazy"
                                 src={gameData[1].icon[btn2]}
                                 key={gameData[1].id}
                                 alt="icone do jogo"
                                 onClick={(e) => handleIcon(e, gameData[1].id)}
                             />
                             <img
+                                loading="lazy"
                                 src={gameData[2].icon[btn3]}
                                 key={gameData[2].id}
                                 alt="icone do jogo"
                                 onClick={(e) => handleIcon(e, gameData[2].id)}
                             />
                             <img
+                                loading="lazy"
                                 src={gameData[3].icon[1]}
                                 key={gameData[3].id}
                                 alt="icone do jogo"
                             />
                             <img
+                                loading="lazy"
                                 src={gameData[4].icon[1]}
                                 key={gameData[4].id}
                                 alt="icone do jogo"
@@ -103,6 +108,7 @@ export function Main({ className, children }) {
                         <aside>
                             <div className={styles.logo}>
                                 <img
+                                    loading="lazy"
                                     src={gameContent.logo}
                                     alt={gameContent.name + " logo"}
                                     key={gameContent.id}
@@ -111,6 +117,7 @@ export function Main({ className, children }) {
                             <div className={styles.trailer}>
                                 <p>assista o trailer</p>
                                 <img
+                                    loading="lazy"
                                     onMouseEnter={handleEnter}
                                     onMouseLeave={handleOut}
                                     src={gameContent.static}

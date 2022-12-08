@@ -1,8 +1,8 @@
-import img1 from '../../assets/menu-esports/1.png'
-import img2 from '../../assets/menu-esports/2.png'
-import img3 from '../../assets/menu-esports/3.png'
-import img4 from '../../assets/menu-esports/4.png'
-import img5 from '../../assets/menu-esports/5.png'
+import img1 from '../../assets/menu-esports/1.webp'
+import img2 from '../../assets/menu-esports/2.webp'
+import img3 from '../../assets/menu-esports/3.webp'
+import img4 from '../../assets/menu-esports/4.webp'
+import img5 from '../../assets/menu-esports/5.webp'
 export const esportsData = [
     {
         id: 0,

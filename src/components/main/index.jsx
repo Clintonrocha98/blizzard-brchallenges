@@ -58,7 +58,7 @@ export function Main({ className, children }) {
     }
     return (
         <>
-            {children}
+
             <div
                 className={styles.banner}
                 style={{ backgroundImage: `url(${gameContent.bg})` }}

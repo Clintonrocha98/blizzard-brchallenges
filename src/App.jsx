@@ -7,9 +7,8 @@ import style from "./components/style/style.module.scss";
 function App() {
     return (
         <>
-            <Main className={style.container}>
-                <Header className={style.container}></Header>
-            </Main>
+            <Header className={style.container}></Header>
+            <Main className={style.container}></Main>
             <SectionGames className={style.container}></SectionGames>
             <Footer className={style.container}></Footer>
         </>

@@ -46,7 +46,7 @@ export function SectionGames({ className }) {
                             <img src={img5} alt="ver todos os jogos" />
                         </div>
                     </div>
-                    <div className={styles.warrapCard}>
+                    <div className={styles.warrapGrid}>
                         {apiGames.map((game, index) => (
                             <div key={index} className={styles.card}>
                                 <div

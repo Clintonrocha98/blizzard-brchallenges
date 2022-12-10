@@ -6,6 +6,7 @@ import blizzard from "../../assets/logo-blizzard.webp";
 import iconLogar from "../../assets/logar-icon.png";
 import { MenuGames } from "../menuGames";
 import { MenuEsports } from "../menuEsports";
+import ButtonMenu from "./button-menu/button-menu";
 
 export function Header({ className }) {
     const [menu, attMenu] = useState(false);
@@ -80,6 +81,7 @@ export function Header({ className }) {
                             Logar
                         </button>
                     </div>
+                    <ButtonMenu></ButtonMenu>
                 </div>
             </header>
             {menu === true && esports === false ? (

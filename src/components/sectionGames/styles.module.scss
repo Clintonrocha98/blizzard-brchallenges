@@ -30,14 +30,10 @@
 .warrapGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
     justify-items: center;
-    gap: 30px;
-    row-gap: 50px;
+    gap: 50px 0px;
     padding-bottom: 100px;
     .card {
-        width: 301px;
-        height: 494.9px;
         .bg {
             display: flex;
             justify-content: center;
@@ -47,7 +43,6 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-
             border-radius: 5%;
             position: relative;
             &:hover {
@@ -58,9 +53,6 @@
             img {
                 width: 159.1px;
                 height: 105.35px;
-                // position: absolute;
-                // bottom: 0;
-                // left: 70px;
                 margin-bottom: 50px;
             }
         }
@@ -82,18 +74,7 @@
             opacity: 0.8;
         }
     }
-    @media (max-width: 1440px) {
-        .card {
-            .bg {
-                width: 280px;
-                height: 384px;
-            }
-            > img {
-                width: 148px;
-                height: 98px;
-            }
-        }
-    }
+
     .lastCard {
         display: flex;
         justify-content: center;
@@ -101,7 +82,6 @@
         flex-direction: column;
         width: 301px;
         height: 412.8px;
-        left: 999px;
         top: 0px;
 
         border: 1.6125px solid #212428;
@@ -124,5 +104,66 @@
 
     100% {
         background-size: 125%;
+    }
+}
+@media (max-width: 1440px) {
+    .warrapGrid {
+        .card {
+            .bg {
+                width: 260px;
+                height: 384px;
+                > img {
+                    width: 148px;
+                    height: 98px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .lastCard {
+            width: 260px;
+            height: 384px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .warrapGrid {
+        grid-template-columns: repeat(3, 1fr);
+        .card {
+            .bg {
+                width: 200px;
+                height: 270px;
+                > img {
+                    width: 107.3px;
+                    height: 71.05px;
+                }
+            }
+        }
+        .lastCard {
+            width: 200px;
+            height: 270px;
+        }
+    }
+}
+@media (max-width: 375px) {
+    .warrapGrid {
+        grid-template-columns: repeat(2, 1fr);
+        .card {
+            .bg {
+                width: 150px;
+                height: 200px;
+                > img {
+                    width: 82.46px;
+                    height: 54.6px;
+                    margin-bottom: 20px;
+                }
+            }
+            p {
+                display: none;
+            }
+        }
+        .lastCard {
+            width: 150px;
+            height: 200px;
+        }
     }
 }

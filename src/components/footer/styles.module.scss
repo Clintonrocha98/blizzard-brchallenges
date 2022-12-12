@@ -43,8 +43,7 @@ footer {
     }
 
     .warrapFooterContent {
-        margin-top: 100px;
-        top: 0px;
+        top: 20%;
         position: absolute;
         h2 {
             font-weight: 700;
@@ -66,6 +65,16 @@ footer {
                 width: auto;
                 height: auto;
                 margin-right: 16px;
+            }
+            .telefoneInfo {
+                width: 70%;
+                color: #e5e5e5;
+                strong {
+                    text-decoration: underline;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
             }
         }
 
@@ -96,6 +105,17 @@ footer {
                 width: auto;
                 height: auto;
                 margin-right: 10px;
+            }
+        }
+    }
+}
+@media (max-width: 1440px) {
+    footer {
+        .bg1 {
+            overflow: hidden;
+            .bg2 {
+                left: 520px;
+                margin-right: 0px;
             }
         }
     }

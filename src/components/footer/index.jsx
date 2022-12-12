@@ -59,8 +59,11 @@ export function Footer({ className }) {
                             {textBtn}
                         </button>
                         <p>
-                            <img src={logo4} alt="icone" /> Também disponível
-                            como aplicativo móvel
+                            <img src={logo4} alt="icone" />
+                            <span className={styles.telefoneInfo}>
+                                Também disponível como 
+                                <strong> aplicativo móvel</strong>
+                            </span>
                         </p>
                     </div>
                 </div>

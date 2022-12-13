@@ -125,3 +125,28 @@ footer {
         }
     }
 }
+@media (max-width: 375px) {
+    footer {
+        height: 875px;
+        .bg1 {
+            .bg2 {
+                left: 0px;
+                bottom: 25px;
+
+                width: 528.82px;
+                height: 298.2px;
+                .bg3 {
+                    width: 276.22px;
+                    height: 169.89px;
+                }
+            }
+        }
+        .warrapFooterContent {
+            top: 5%;
+            width: 90%;
+        }
+        .containerFooter {
+            padding: 0px 0px 0px 20px;
+        }
+    }
+}

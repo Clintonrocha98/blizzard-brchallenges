@@ -145,6 +145,14 @@
     }
 }
 @media (max-width: 375px) {
+    .headerSection {
+        h2 {
+            font-size: 1.75rem;
+        }
+        .warrapIcons {
+            display: none;
+        }
+    }
     .warrapGrid {
         grid-template-columns: repeat(2, 1fr);
         .card {
@@ -164,6 +172,9 @@
         .lastCard {
             width: 150px;
             height: 200px;
+            img {
+                width: 80%;
+            }
         }
     }
 }

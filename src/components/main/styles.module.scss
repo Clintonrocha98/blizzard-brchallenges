@@ -39,7 +39,7 @@ main {
     }
     p {
         font-weight: 400;
-        font-size: 18px;
+        font-size: 1.125rem;
         line-height: 27px;
         margin-top: 16px;
         margin-bottom: 32px;
@@ -116,5 +116,26 @@ main {
 
         width: 600px;
         position: absolute;
+    }
+}
+@media (max-width: 375px) {
+    .left {
+        bottom: 5%;
+    }
+
+    .right {
+        display: none;
+    }
+    .warrapTitle {
+        
+        width: 345px;
+        h1 {
+            font-size: 2.9rem;
+            padding-top: 150px;
+            width: 75%;
+        }
+        button{
+            width: 280px;
+        }
     }
 }

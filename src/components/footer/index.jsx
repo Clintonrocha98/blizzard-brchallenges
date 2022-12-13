@@ -35,7 +35,7 @@ export function Footer({ className }) {
                         <div className={styles.bg3}></div>
                     </div>
                 </div>
-                <div className={className}>
+                <div className={`${className} ${styles.containerFooter}`}>
                     <div className={styles.warrapFooterContent}>
                         <img src={logoBattleNet} alt="logo da battle.net" />
                         <h2>Baixe agora o battle.net</h2>

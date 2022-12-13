@@ -71,7 +71,7 @@ footer {
                 color: #e5e5e5;
                 strong {
                     text-decoration: underline;
-                    &:hover{
+                    &:hover {
                         cursor: pointer;
                     }
                 }
@@ -80,6 +80,8 @@ footer {
 
         button {
             display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 14px 32px;
             gap: 8px;
             margin: 40px 0;
@@ -114,9 +116,12 @@ footer {
         .bg1 {
             overflow: hidden;
             .bg2 {
-                left: 520px;
+                left: 350px;
                 margin-right: 0px;
             }
+        }
+        .warrapFooterContent {
+            width: 50%;
         }
     }
 }

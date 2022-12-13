@@ -71,12 +71,27 @@ header {
         }
         > .logarBtn {
             display: flex;
+            align-items: center;
             padding: 10px 25px;
             gap: 6px;
 
             background: #00aeff;
             border-color: #00aeff;
             border-radius: 3px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .warrapHeader {
+        ul {
+            display: none;
+        }
+    }
+}
+@media (max-width: 375px) {
+    .warrapHeader {
+        .warrapButton {
+            display: none;
         }
     }
 }

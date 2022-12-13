@@ -1,11 +1,15 @@
 import gameData from "../gameData";
 import { useState } from "react";
 import styles from "./styles.module.scss";
-export function Main({ className, children }) {
+
+export function Main({ className }) {
+
     const [gameContent, attGame] = useState(gameData[0]);
+
     const [btn1, attBtn1] = useState(0);
     const [btn2, attBtn2] = useState(1);
     const [btn3, attBtn3] = useState(1);
+
     function handleClick(id) {
         if (id >= 3) {
             return;
@@ -56,9 +60,9 @@ export function Main({ className, children }) {
             e.target.setAttribute("src", gameData[2].icon[0]);
         }
     }
+
     return (
         <>
-
             <div
                 className={styles.banner}
                 style={{ backgroundImage: `url(${gameContent.bg})` }}
@@ -105,7 +109,7 @@ export function Main({ className, children }) {
                             <p>{gameContent.description}</p>
                             <button>{gameContent.btntext}</button>
                         </div>
-                        <aside>
+                        <aside className={styles.right}>
                             <div className={styles.logo}>
                                 <img
                                     loading="lazy"

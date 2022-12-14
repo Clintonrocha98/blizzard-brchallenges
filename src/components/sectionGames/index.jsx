@@ -1,4 +1,3 @@
-import apiGames from "../api/api-blizzard-games";
 import styles from "./styles.module.scss";
 
 import img1 from "../../assets/icons-section-games/1.webp";
@@ -8,6 +7,9 @@ import img4 from "../../assets/icons-section-games/4.webp";
 import img5 from "../../assets/icons-section-games/ver-jogos.webp";
 import img6 from "../../assets/icons1.webp";
 import img7 from "../../assets/icons2.webp";
+
+import { useEffect, useState } from "react";
+
 const icons = [
     {
         id: 0,
@@ -26,7 +28,17 @@ const icons = [
         icon: img4,
     },
 ];
+
 export function SectionGames({ className }) {
+    const [games, setGames] = useState([]);
+
+    useEffect(() => {
+        fetch("https://api.brchallenges.com/api/blizzard/games")
+            .then((response) => response.json())
+            .then((data) => {
+                setGames(data);
+            });
+    }, []);
     return (
         <>
             <section className={styles.sectionGame}>
@@ -47,7 +59,7 @@ export function SectionGames({ className }) {
                         </div>
                     </div>
                     <div className={styles.warrapGrid}>
-                        {apiGames.map((game, index) => (
+                        {games.map((game, index) => (
                             <div key={index} className={styles.card}>
                                 <div
                                     className={styles.bg}

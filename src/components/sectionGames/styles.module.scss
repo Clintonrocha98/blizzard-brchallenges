@@ -31,47 +31,48 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
-    gap: 50px 0px;
+    gap: 50px 10px;
     padding-bottom: 100px;
     .card {
-        .bg {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            width: 301px;
-            height: 412.8px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            border-radius: 5%;
-            position: relative;
-            &:hover {
+        overflow: hidden;
+        width: 100%;
+        height: 412px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        
+        .poster {
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            object-fit: cover;
+            filter: brightness(75%);
+            transition: all 0.9s ease-in-out;
+            &:hover{
                 cursor: pointer;
-                transition-property: background-image;
-                animation: HoverImg 1s ease-in-out forwards;
-            }
-            img {
-                width: 159.1px;
-                height: 105.35px;
-                margin-bottom: 50px;
+                transform: scale(1.2);
             }
         }
-
-        .fristP {
-            font-weight: 600;
-            font-size: 1.18rem;
-            line-height: 1.81rem;
-            color: #e5e5e5;
-            margin-top: 25px;
-            margin-bottom: 5px;
+        .logo {
+            bottom: 80px;
+            position: absolute;
         }
-        .secondP {
-            font-weight: 400;
-            font-size: 0.93rem;
-            line-height: 1.43rem;
-            color: #e5e5e5;
-
-            opacity: 0.8;
+        .description {
+            width: 100%;
+            .fristP {
+                font-weight: 600;
+                font-size: 1.18rem;
+                line-height: 1.81rem;
+                color: #e5e5e5;
+                margin-bottom: 5px;
+            }
+            .secondP {
+                font-weight: 400;
+                font-size: 0.93rem;
+                line-height: 1.43rem;
+                color: #e5e5e5;
+            }
         }
     }
 
@@ -80,19 +81,25 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 301px;
-        height: 412.8px;
         top: 0px;
 
         border: 1.6125px solid #212428;
         border-radius: 4.3px;
-        img {
-            width: auto;
-            height: auto;
-            margin: 16px;
+        img{
+            margin-bottom: 35px;
+        }
+        span {
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 26px;
+
+            color: #ffffff;
             &:hover {
                 scale: 1.1;
                 cursor: pointer;
+            }
+            svg{
+                margin-right: 15px;
             }
         }
     }
@@ -106,42 +113,18 @@
         background-size: 125%;
     }
 }
-@media (max-width: 1440px) {
-    .warrapGrid {
-        .card {
-            .bg {
-                width: 260px;
-                height: 384px;
-                > img {
-                    width: 148px;
-                    height: 98px;
-                    margin-bottom: 30px;
-                }
-            }
-        }
-        .lastCard {
-            width: 260px;
-            height: 384px;
-        }
-    }
-}
+// @media (max-width: 1440px) {
+//     .warrapGrid {
+//         .card {
+//         }
+//         .lastCard {
+            
+//         }
+//     }
+// }
 @media (max-width: 768px) {
     .warrapGrid {
         grid-template-columns: repeat(3, 1fr);
-        .card {
-            .bg {
-                width: 200px;
-                height: 270px;
-                > img {
-                    width: 107.3px;
-                    height: 71.05px;
-                }
-            }
-        }
-        .lastCard {
-            width: 200px;
-            height: 270px;
-        }
     }
 }
 @media (max-width: 375px) {
@@ -156,25 +139,10 @@
     .warrapGrid {
         grid-template-columns: repeat(2, 1fr);
         .card {
-            .bg {
-                width: 150px;
-                height: 200px;
-                > img {
-                    width: 82.46px;
-                    height: 54.6px;
-                    margin-bottom: 20px;
-                }
-            }
             p {
                 display: none;
             }
         }
-        .lastCard {
-            width: 150px;
-            height: 200px;
-            img {
-                width: 80%;
-            }
-        }
+        
     }
 }

@@ -5,7 +5,7 @@ import img2 from "../../assets/icons-section-games/2.webp";
 import img3 from "../../assets/icons-section-games/3.webp";
 import img4 from "../../assets/icons-section-games/4.webp";
 import img5 from "../../assets/icons-section-games/ver-jogos.webp";
-import img6 from "../../assets/icons1.webp";
+
 import img7 from "../../assets/icons2.webp";
 
 import { useEffect, useState } from "react";
@@ -61,27 +61,66 @@ export function SectionGames({ className }) {
                     <div className={styles.warrapGrid}>
                         {games.map((game, index) => (
                             <div key={index} className={styles.card}>
-                                <div
-                                    className={styles.bg}
-                                    style={{
-                                        backgroundImage: `url(${game.image})`,
-                                    }}
-                                >
-                                    <img
-                                        loading="lazy"
-                                        src={game.logo}
-                                        alt={"logo do jogo" + game.name}
-                                    />
+                                <img
+                                    src={game.image}
+                                    alt={`${"logo do jogo" + game.name}`}
+                                    className={styles.poster}
+                                />
+                                <img
+                                    loading="lazy"
+                                    src={game.logo}
+                                    alt={"logo do jogo" + game.name}
+                                    className={styles.logo}
+                                />
+                                <div className={styles.description}>
+                                    <p className={styles.fristP}>{game.name}</p>
+                                    <p className={styles.secondP}>
+                                        {game.category}
+                                    </p>
                                 </div>
-                                <p className={styles.fristP}>{game.name}</p>
-                                <p className={styles.secondP}>
-                                    {game.category}
-                                </p>
                             </div>
                         ))}
-                        <div className={styles.lastCard}>
+                        <div className={`${styles.card} ${styles.lastCard}`}>
                             <img src={img7} alt="logo blizzard" />
-                            <img src={img6} alt="logo ver todos os jogos" />
+                            <span>
+                                <svg
+                                    width="11"
+                                    height="10"
+                                    viewBox="0 0 11 10"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <rect
+                                        x="0.949951"
+                                        y="0.137573"
+                                        width="3.225"
+                                        height="3.225"
+                                        fill="#C4C4C4"
+                                    />
+                                    <rect
+                                        x="0.949951"
+                                        y="6.58759"
+                                        width="3.225"
+                                        height="3.225"
+                                        fill="#C4C4C4"
+                                    />
+                                    <rect
+                                        x="7.3999"
+                                        y="0.137573"
+                                        width="3.225"
+                                        height="3.225"
+                                        fill="#C4C4C4"
+                                    />
+                                    <rect
+                                        x="7.3999"
+                                        y="6.58759"
+                                        width="3.225"
+                                        height="3.225"
+                                        fill="#C4C4C4"
+                                    />
+                                </svg>
+                                Ver todos jogos
+                            </span>
                         </div>
                     </div>
                 </div>

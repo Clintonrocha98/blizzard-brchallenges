@@ -1,16 +1,16 @@
 import styles from "./styles.module.scss";
 import { useState } from "react";
-import iconsDown from "../../assets/iconDown.png";
-import iconsUp from "../../assets/iconUp.png";
 import blizzard from "../../assets/logo-blizzard.webp";
 import iconLogar from "../../assets/logar-icon.png";
 import { MenuGames } from "../menuGames";
 import { MenuEsports } from "../menuEsports";
 import ButtonMenu from "./button-menu/button-menu";
+import Arrow from "../../assets/SVG/arrow-svg";
 
 export function Header({ className }) {
     const [menu, attMenu] = useState(false);
     const [esports, attEsports] = useState(false);
+
     const [arrowJogo, NewarrowJogo] = useState(false);
     const [arrowEsport, NewarrowEsport] = useState(false);
 
@@ -44,25 +44,35 @@ export function Header({ className }) {
                             alt="icone da blizzard"
                         />
                         <ul>
-                            <li onClick={ArrowclickJogo}>
+                            <li
+                                onClick={ArrowclickJogo}
+                                style={
+                                    arrowJogo === true
+                                        ? { color: "#00aeff" }
+                                        : {}
+                                }
+                            >
                                 Jogos
-                                <img
-                                    src={
-                                        arrowJogo === true ? iconsUp : iconsDown
+                                <Arrow
+                                    className={
+                                        arrowJogo === true ? styles.arrow : ""
                                     }
-                                    alt="arrow"
-                                />
+                                ></Arrow>
                             </li>
-                            <li onClick={ArrowclickEsport}>
+                            <li
+                                onClick={ArrowclickEsport}
+                                style={
+                                    arrowEsport === true
+                                        ? { color: "#00aeff" }
+                                        : {}
+                                }
+                            >
                                 Esports
-                                <img
-                                    src={
-                                        arrowEsport === true
-                                            ? iconsUp
-                                            : iconsDown
+                                <Arrow
+                                    className={
+                                        arrowEsport === true ? styles.arrow : ""
                                     }
-                                    alt="arrow"
-                                />
+                                ></Arrow>
                             </li>
                             <li>Loja</li>
                             <li>Notícias</li>
@@ -81,7 +91,8 @@ export function Header({ className }) {
                             Logar
                         </button>
                     </div>
-                    <ButtonMenu></ButtonMenu>
+                        <ButtonMenu></ButtonMenu>
+                    
                 </div>
             </header>
             {menu === true && esports === false ? (

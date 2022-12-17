@@ -30,7 +30,8 @@
             list-style: none;
             padding-bottom: 100px;
             img {
-                width: 100%;
+                max-width: 174px;
+                max-height: 149px;
                 &:hover {
                     cursor: pointer;
                     border-radius: 100%;
@@ -48,6 +49,7 @@
             line-height: 120%;
 
             color: #9d9d9d;
+            text-align: center;
         }
     }
 }
@@ -76,7 +78,7 @@
 
         color: #ffffff;
 
-        > img {
+        > svg {
             width: auto;
             height: auto;
             margin-right: 10px;
@@ -98,6 +100,14 @@
         to {
             transform: translateY(0);
             display: block;
+        }
+    }
+}
+@media (max-width: 1080px) {
+    .menu {
+        ul {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
         }
     }
 }

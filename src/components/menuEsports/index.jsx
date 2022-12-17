@@ -1,6 +1,6 @@
 import { esportsData } from "../menuData/esportsData";
-import torneio from "../../assets/icon-torneio.png";
 import styles from "./styles.module.scss";
+import Trophy from "../../assets/SVG/trofeu-svg";
 
 export function MenuEsports() {
     return (
@@ -13,17 +13,16 @@ export function MenuEsports() {
                                 src={esports.url}
                                 alt={"logo do capeonato" + esports.name}
                             />
-                            <p>{esports.name}</p>
+                            <p>
+                                <span>{esports.name}</span>
+                            </p>
                         </li>
                     ))}
                 </ul>
                 <div className={styles.warrapButton}>
                     <div>
                         <button>
-                            <img
-                                src={torneio}
-                                alt="icone de uma taça referente a um campeonato"
-                            />
+                            <Trophy />
                             Torneios da comunidade
                         </button>
                     </div>

@@ -18,17 +18,17 @@
 
     ul {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr 1fr;
         justify-items: center;
+        gap: 50px 30px;
         width: 70%;
-        margin: 0 auto;
+        margin: 0 auto 50px auto;
         li {
             display: flex;
             flex-direction: column;
             align-items: center;
             list-style: none;
-            padding: 20px;
             img {
                 &:hover {
                     cursor: pointer;
@@ -47,6 +47,8 @@
             line-height: 120%;
 
             color: #9d9d9d;
+            text-align: center;
+            padding: 0 15px;
         }
     }
 }
@@ -75,7 +77,7 @@
 
         color: #ffffff;
 
-        > img {
+        > svg {
             width: auto;
             height: auto;
             margin-right: 10px;
@@ -97,6 +99,22 @@
         to {
             transform: translateY(0);
             display: block;
+        }
+    }
+}
+@media (max-width: 960px) {
+    .menu {
+        ul {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        .warrapButton{
+            height: auto;
+            >div{
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
         }
     }
 }

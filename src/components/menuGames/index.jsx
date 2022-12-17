@@ -1,10 +1,10 @@
 import menuData from "../menuData";
 import styles from "./styles.module.scss";
 
-import pontinho from "../../assets/icons-menu/pontinhos-menu.webp";
-import battle from "../../assets/icons-menu/battle-net.webp";
-import iconDownload from "../../assets/icons-menu/icon-downloads.webp";
-import iconChat from "../../assets/icons-menu/iconchat.webp";
+import Dots from "../../assets/SVG/pontinhos-menu-games-svg";
+import DownloadIcon from "../../assets/SVG/download-icon-svg";
+import ForumIcon from "../../assets/SVG/forum-icon-svg";
+import BattleNetIcon from "../../assets/SVG/battle-net-icon-svg";
 
 export function MenuGames() {
     return (
@@ -24,25 +24,19 @@ export function MenuGames() {
                 <div className={styles.warrapButton}>
                     <div>
                         <button>
-                            <img
-                                src={pontinho}
-                                alt="icone ver todos os jogos"
-                            />
+                            <Dots />
                             Ver todos os jogos
                         </button>
                         <button>
-                            <img src={battle} alt="icone battle net" />
+                            <BattleNetIcon />
                             Aplicativo Battle.net
                         </button>
                         <button>
-                            <img
-                                src={iconDownload}
-                                alt="icone botão para download"
-                            />
+                            <DownloadIcon />
                             Downloads
                         </button>
                         <button>
-                            <img src={iconChat} alt="icone do forun" />
+                            <ForumIcon/>
                             Fóruns dos jogos
                         </button>
                     </div>

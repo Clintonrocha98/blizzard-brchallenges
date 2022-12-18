@@ -144,6 +144,13 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+@media (max-width: 650px) {
+    .headerSection {
+        .warrapIcons {
+            display: none;
+        }
+    }
+}
 @media (max-width: 375px) {
     .headerSection {
         h2 {

@@ -82,7 +82,8 @@ export function SectionGames({ className }) {
                         ))}
                         <div className={`${styles.card} ${styles.lastCard}`}>
                             <img src={img7} alt="logo blizzard" />
-                            <span>
+
+                            <p>
                                 <svg
                                     width="11"
                                     height="10"
@@ -119,8 +120,8 @@ export function SectionGames({ className }) {
                                         fill="#C4C4C4"
                                     />
                                 </svg>
-                                Ver todos jogos
-                            </span>
+                                <span>Ver todos jogos</span>
+                            </p>
                         </div>
                     </div>
                 </div>

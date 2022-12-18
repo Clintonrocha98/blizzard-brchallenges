@@ -4,7 +4,7 @@ import blizzard from "../../assets/logo-blizzard.webp";
 import iconLogar from "../../assets/logar-icon.png";
 import { MenuGames } from "../menuGames";
 import { MenuEsports } from "../menuEsports";
-import ButtonMenu from "./button-menu/button-menu";
+import ButtonMenu from "../button-menu/button-menu";
 import Arrow from "../../assets/SVG/arrow-svg";
 
 export function Header({ className }) {
@@ -46,32 +46,20 @@ export function Header({ className }) {
                         <ul>
                             <li
                                 onClick={ArrowclickJogo}
-                                style={
-                                    arrowJogo === true
-                                        ? { color: "#00aeff" }
-                                        : {}
-                                }
+                                style={arrowJogo ? { color: "#00aeff" } : {}}
                             >
                                 Jogos
                                 <Arrow
-                                    className={
-                                        arrowJogo === true ? styles.arrow : ""
-                                    }
+                                    className={arrowJogo ? styles.arrow : ""}
                                 ></Arrow>
                             </li>
                             <li
                                 onClick={ArrowclickEsport}
-                                style={
-                                    arrowEsport === true
-                                        ? { color: "#00aeff" }
-                                        : {}
-                                }
+                                style={arrowEsport ? { color: "#00aeff" } : {}}
                             >
                                 Esports
                                 <Arrow
-                                    className={
-                                        arrowEsport === true ? styles.arrow : ""
-                                    }
+                                    className={arrowEsport ? styles.arrow : ""}
                                 ></Arrow>
                             </li>
                             <li>Loja</li>
@@ -91,20 +79,11 @@ export function Header({ className }) {
                             Logar
                         </button>
                     </div>
-                        <ButtonMenu></ButtonMenu>
-                    
+                    <ButtonMenu></ButtonMenu>
                 </div>
             </header>
-            {menu === true && esports === false ? (
-                <MenuGames></MenuGames>
-            ) : (
-                <></>
-            )}
-            {esports === true && menu === false ? (
-                <MenuEsports></MenuEsports>
-            ) : (
-                <></>
-            )}
+            {menu && !esports ? <MenuGames></MenuGames> : <></>}
+            {esports && !menu ? <MenuEsports></MenuEsports> : <></>}
         </>
     );
 }

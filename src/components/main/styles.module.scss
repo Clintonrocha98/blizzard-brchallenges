@@ -30,10 +30,10 @@ main {
 
 .warrapTitle {
     color: #ffffff;
-    padding: 0 5%;
+    padding: 0 5% 0 125px;
     h1 {
         font-weight: 700;
-        font-size: 64px;
+        font-size: 4rem;
         line-height: 110.2%;
         text-shadow: 5px 5px 1px black;
     }
@@ -95,6 +95,14 @@ main {
         height: 158px;
     }
 }
+@media (max-width: 1080px) {
+    .warrapTitle {
+        padding: 0 5% 0 45px;
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
 @media (max-width: 768px) {
     .left {
         position: absolute;
@@ -127,14 +135,13 @@ main {
         display: none;
     }
     .warrapTitle {
-        
         width: 345px;
         h1 {
             font-size: 2.9rem;
             padding-top: 150px;
             width: 75%;
         }
-        button{
+        button {
             width: 280px;
         }
     }

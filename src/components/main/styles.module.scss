@@ -143,10 +143,11 @@ main {
 @media (max-width: 375px) {
     .left {
         bottom: 5%;
+        gap: 5px;
     }
 
     .warrapTitle {
-        width: 320px;
+        width: 90%;
         margin-bottom: 110px;
         h1 {
             font-size: 2rem;

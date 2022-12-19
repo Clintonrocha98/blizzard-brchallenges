@@ -1,0 +1,37 @@
+.warrapButton {
+    display: flex;
+    gap: 16px;
+    > button {
+        width: 115px;
+        height: 40px;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.3125rem;
+
+        text-align: center;
+
+        color: #ffffff;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            scale: 90%;
+            cursor: pointer;
+        }
+    }
+    > .criarContaBtn {
+        border: 0.78px solid #ffffff;
+        border-radius: 3px;
+        background-color: transparent;
+    }
+    > .logarBtn {
+        display: flex;
+        align-items: center;
+        padding: 10px 25px;
+        gap: 6px;
+
+        background: #00aeff;
+        border-color: #00aeff;
+        border-radius: 3px;
+    }
+}
+

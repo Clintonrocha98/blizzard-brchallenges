@@ -1,11 +1,11 @@
 import styles from "./styles.module.scss";
 import { useState } from "react";
 import blizzard from "../../assets/logo-blizzard.webp";
-import iconLogar from "../../assets/logar-icon.png";
 import { MenuGames } from "../menuGames";
 import { MenuEsports } from "../menuEsports";
 import ButtonMenu from "../button-menu/button-menu";
 import Arrow from "../../assets/SVG/arrow-svg";
+import ButtonsHeader from "../warrapButtonsHeader";
 
 export function Header({ className }) {
     const [menu, attMenu] = useState(false);
@@ -67,18 +67,10 @@ export function Header({ className }) {
                             <li>Suporte</li>
                         </ul>
                     </div>
-                    <div className={styles.warrapButton}>
-                        <button className={styles.criarContaBtn}>
-                            Crir conta
-                        </button>
-                        <button className={styles.logarBtn}>
-                            <img
-                                src={iconLogar}
-                                alt="icone do botão para entrar na conta"
-                            />
-                            Logar
-                        </button>
+                    <div className={styles.buttonsHeader}>
+                        <ButtonsHeader></ButtonsHeader>
                     </div>
+
                     <ButtonMenu></ButtonMenu>
                 </div>
             </header>

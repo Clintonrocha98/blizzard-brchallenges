@@ -4,9 +4,8 @@ import img1 from "../../assets/icons-section-games/1.webp";
 import img2 from "../../assets/icons-section-games/2.webp";
 import img3 from "../../assets/icons-section-games/3.webp";
 import img4 from "../../assets/icons-section-games/4.webp";
-import img5 from "../../assets/icons-section-games/ver-jogos.webp";
-
 import img7 from "../../assets/icons2.webp";
+import PontinhosBlue from "../../assets/SVG/pontinhos-section-blue-svg";
 
 import { useEffect, useState } from "react";
 
@@ -55,7 +54,9 @@ export function SectionGames({ className }) {
                             ))}
                         </div>
                         <div>
-                            <img src={img5} alt="ver todos os jogos" />
+                            <p>
+                                <PontinhosBlue /> Ver todos os jogos
+                            </p>
                         </div>
                     </div>
                     <div className={styles.warrapGrid}>

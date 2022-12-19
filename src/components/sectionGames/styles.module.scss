@@ -7,6 +7,19 @@
     height: 200px;
     align-items: center;
     justify-content: space-between;
+    p {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #00aeff;
+        svg {
+            margin-right: 5px;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
     h2 {
         font-weight: 700;
         font-size: 32px;
@@ -17,14 +30,6 @@
     .warrapIcons {
         display: flex;
         gap: 25px;
-    }
-    img {
-        width: auto;
-        height: auto;
-        &:hover {
-            cursor: pointer;
-            scale: 1.1;
-        }
     }
 }
 .warrapGrid {
@@ -166,7 +171,7 @@
             p {
                 display: none;
             }
-            .logo{
+            .logo {
                 bottom: 15px;
             }
         }

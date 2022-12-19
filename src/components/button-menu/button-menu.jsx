@@ -1,39 +1,20 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
-import { MenuGames } from "../menuGames";
-import { MenuEsports } from "../menuEsports";
 import Arrow from "../../assets/SVG/arrow-svg";
+import ButtonsHeader from "../warrapButtonsHeader";
 function MenuClick({ style }) {
-    const [arrowJogo, NewarrowJogo] = useState(false);
-    const [arrowEsport, NewarrowEsport] = useState(false);
-    const [menuGame, statusMenuGame] = useState(false);
-    const [menuEsports, statusMenuEsports] = useState(false);
-
-    function ClickMenuGames() {
-        statusMenuGame(true);
-    }
-    
-    function ClickMenuEsports() {
-        statusMenuEsports(true);
-    }
-
     return (
         <>
             <div className={styles.Menu} style={style}>
+                <ButtonsHeader className={styles.loginButton}></ButtonsHeader>
                 <ul>
-                    <li onClick={ClickMenuGames}>
+                    <li>
                         Jogos <Arrow />
                     </li>
-                    {menuGame && !menuEsports ? <MenuGames></MenuGames> : <></>}
 
-                    <li onClick={ClickMenuEsports}>
+                    <li>
                         Esports <Arrow />
                     </li>
-                    {menuEsports && !menuGame ? (
-                        <MenuEsports></MenuEsports>
-                    ) : (
-                        <></>
-                    )}
 
                     <li>Loja</li>
                     <li>Notícias</li>

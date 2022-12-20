@@ -103,6 +103,8 @@ main {
 
 @media (max-width: 1080px) {
     .warrapTitle {
+        margin-top: 100px;
+        
         h1 {
             font-size: 3rem;
         }
@@ -124,10 +126,6 @@ main {
             display: none;
         }
     }
-    .warrapTitle {
-        position: absolute;
-        margin: 0;
-    }
 }
 @media (max-width: 650px) {
     .warrapTitle {
@@ -143,6 +141,7 @@ main {
 @media (max-width: 375px) {
     .left {
         bottom: 5%;
+        right: 15%;
         gap: 5px;
     }
 
@@ -152,7 +151,6 @@ main {
         h1 {
             font-size: 2rem;
             padding-top: 150px;
-            
         }
         button {
             width: 280px;

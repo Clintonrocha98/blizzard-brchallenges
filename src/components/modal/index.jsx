@@ -4,24 +4,16 @@ import IconGoogle from "../../assets/SVG/google-icon-svg";
 import AppleIcon from "../../assets/SVG/apple-icon-svg";
 import FacebookIcon from "../../assets/SVG/facebook-icon-svg";
 import ButtonExitModal from "../../assets/SVG/buttonExitModal-svg";
-import { useState } from "react";
 
-function ModalLoginPag() {
-    const [isOpen, attOpen] = useState(false);
-    function handleClick() {
-        attOpen(true);
-    }
-
+function ModalLoginPag({ onClose = () => {} }) {
     return (
         <>
-            <div
-                className={styles.container}
-                style={isOpen ? { display: `none` } : null}
-            >
+            <div className={styles.container}>
                 <div className={styles.modal}>
-                    <button onClick={handleClick} className={styles.exitButton}>
+                    <button onClick={onClose} className={styles.exitButton}>
                         <ButtonExitModal></ButtonExitModal>
                     </button>
+
                     <img src={logoBattleNet} alt="logo da battle.net" />
                     <input type="text" placeholder="E-mail ou telefone" />
                     <input type="text" placeholder="Senha" />

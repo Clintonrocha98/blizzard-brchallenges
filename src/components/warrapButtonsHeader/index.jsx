@@ -4,21 +4,25 @@ import ModalLoginPag from "../modal";
 import styles from "./styles.module.scss";
 
 function ButtonsHeader({ className }) {
-    const [modalActive, attModal] = useState(false);
-    function handleClick() {
-        attModal(true);
-    }
+    const [modalActive, setModalon] = useState(false);
+
     return (
         <>
             <div className={`${styles.warrapButton} ${className}`}>
-                <button onClick={handleClick} className={styles.criarContaBtn}>
+                <button
+                    onClick={() => setModalon(true)}
+                    className={styles.criarContaBtn}
+                >
                     Crir conta
                 </button>
-                <ModalLoginPag
-                    style={
-                        modalActive ? { display: `flex` } : { display: `none` }
-                    }
-                ></ModalLoginPag>
+                {modalActive ? (
+                    <ModalLoginPag
+                        onClose={() => {
+                            setModalon(false);
+                        }}
+                    ></ModalLoginPag>
+                ) : null}
+
                 <button className={styles.logarBtn}>
                     <img
                         src={iconLogar}

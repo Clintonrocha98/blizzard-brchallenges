@@ -1,11 +1,24 @@
+import { useState } from "react";
 import iconLogar from "../../assets/logar-icon.png";
+import ModalLoginPag from "../modal";
 import styles from "./styles.module.scss";
 
-function ButtonsHeader({className}) {
+function ButtonsHeader({ className }) {
+    const [modalActive, attModal] = useState(false);
+    function handleClick() {
+        attModal(true);
+    }
     return (
         <>
             <div className={`${styles.warrapButton} ${className}`}>
-                <button className={styles.criarContaBtn}>Crir conta</button>
+                <button onClick={handleClick} className={styles.criarContaBtn}>
+                    Crir conta
+                </button>
+                <ModalLoginPag
+                    style={
+                        modalActive ? { display: `flex` } : { display: `none` }
+                    }
+                ></ModalLoginPag>
                 <button className={styles.logarBtn}>
                     <img
                         src={iconLogar}

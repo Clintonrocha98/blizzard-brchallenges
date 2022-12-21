@@ -62,7 +62,7 @@ main {
 
         gap: 8px;
 
-        width: 331px;
+        width: 320px;
         height: 52px;
 
         background: #00aeff;
@@ -103,7 +103,7 @@ main {
 
 @media (max-width: 1080px) {
     .warrapTitle {
-        margin-top: 100px;
+        margin-top: 20px;
 
         h1 {
             font-size: 3rem;
@@ -113,13 +113,12 @@ main {
 @media (max-width: 890px) {
     .left {
         position: absolute;
-        bottom: 10%;
+        bottom: 5%;
         flex-direction: row;
     }
     .right {
         display: flex;
         gap: 325px;
-        position: absolute;
         right: 40px;
         flex-direction: column;
         p {

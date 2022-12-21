@@ -8,6 +8,7 @@ function App() {
     return (
         <>
             <Header className={style.container}></Header>
+            
             <Main className={style.container}></Main>
             <SectionGames className={style.container}></SectionGames>
             <Footer className={style.container}></Footer>

@@ -1,0 +1,162 @@
+.container {
+    display: none;
+    inset: 0;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+.modal {
+    background-image: url("../../assets/modal-bg.png");
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 696px;
+    height: 600px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .exitButton {
+        background: transparent;
+        border: none;
+        margin: 24px 24px 0 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 32px;
+        height: 32px;
+        &:hover {
+            border: 1px solid rgb(63, 63, 62);
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+    > img {
+        width: 166px;
+        height: 20px;
+        margin-bottom: 40px;
+    }
+    input {
+        width: 426px;
+        height: 48px;
+        padding: 12px 0 13px 16px;
+        background: #ffffff;
+        border-radius: 4px;
+        border: none;
+    }
+    input::placeholder {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+
+        color: #363842;
+
+        opacity: 0.6;
+    }
+    input:focus-visible {
+        outline: 2px solid #00aeff;
+        border-radius: 3px;
+    }
+    img + input {
+        margin-bottom: 15px;
+    }
+    button {
+        width: 426px;
+        height: 52px;
+
+        margin-top: 40px;
+
+        background: #00aeff;
+        border-radius: 4px;
+        border: none;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 24px;
+
+        text-align: center;
+
+        color: #ffffff;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.9;
+        }
+    }
+    p {
+        font-weight: 500;
+        line-height: 21px;
+
+        color: #ffffff;
+        span {
+            text-decoration-line: underline;
+            color: #00aeff;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    button + p {
+        font-size: 0.87rem;
+        margin-top: 40px;
+    }
+    div + p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .warrapButton {
+        display: flex;
+        gap: 15px;
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: #ffffff;
+            border-radius: 4px;
+            margin-top: 15px;
+            margin-bottom: 35px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        button:nth-child(1) {
+            &:hover {
+                background-image: linear-gradient(
+                    to top,
+                    #f60808,
+                    #f85200,
+                    #f87900,
+                    #f69900,
+                    #f2b600,
+                    #dfbd00,
+                    #cac300,
+                    #b4c900,
+                    #90ba00,
+                    #6bab00,
+                    #449b00,
+                    #038b08
+                );
+            }
+        }
+        button:nth-child(2) {
+            &:hover {
+                background-color: rgb(108, 108, 107);
+            }
+        }
+        button:nth-child(3) {
+            &:hover {
+                background-color: rgb(37, 37, 230);
+            }
+        }
+    }
+}
+.active {
+    display: flex;
+}
+.deactivated {
+    display: none;
+}

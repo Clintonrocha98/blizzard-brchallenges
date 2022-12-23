@@ -1,10 +1,6 @@
 import diabloiv from "../../assets/icons-games/diabloIV.webp";
-import diabloivoff from "../../assets/icons-games/diabloIV-off.webp";
 import hearthstone from "../../assets/icons-games/hearthstone.webp";
-import hearthstoneoff from "../../assets/icons-games/hearthstone-off.webp";
 import wow from "../../assets/icons-games/wow.webp";
-import wowoff from "../../assets/icons-games/wow-off.webp";
-
 import diablooff from "../../assets/icons-games/diablo-off.webp";
 import starcraftoff from "../../assets/icons-games/starcraft-off.webp";
 
@@ -32,7 +28,7 @@ const gameData = [
         description:
             "O retorno de Lilith traz uma era de escuridão e sofrimento",
         btntext: "Jogue agora",
-        icon: [diabloiv, diabloivoff],
+        icon: diabloiv,
         logo: diabloivLogo,
         giff: diablogiff,
         static: diabloivstatic,
@@ -45,7 +41,7 @@ const gameData = [
         description:
             "A Horda e a Aliança se encontraram no Vale Alterac para lutar",
         btntext: "Reserve agora na pré-venda",
-        icon: [hearthstone, hearthstoneoff],
+        icon: hearthstone,
         logo: hearthstoneLogo,
         giff: hearthstonegiff,
         static: hearthstonestatic,
@@ -57,7 +53,7 @@ const gameData = [
         title: "Desbrave as Terras Sombrias em Shadowlands!",
         description: "O que jaz além do mundo que você conhece?",
         btntext: "Reserve agora na pré-venda",
-        icon: [wow, wowoff],
+        icon: wow,
         logo: wowLogo,
         giff: wowgiff,
         static: wowstatic,
@@ -65,11 +61,11 @@ const gameData = [
     },
     {
         id: 3,
-        icon: [, diablooff],
+        icon: diablooff,
     },
     {
         id: 4,
-        icon: [, starcraftoff],
+        icon: starcraftoff,
     },
 ];
 

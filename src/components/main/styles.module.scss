@@ -18,6 +18,20 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    input {
+        display: none;
+    }
+
+    img:nth-child(1),
+    img:nth-child(2),
+    img:nth-child(3) {
+        opacity: 0.4;
+    }
+    input:checked + label {
+        img {
+            opacity: 1;
+        }
+    }
     img {
         width: 48px;
         height: 48px;

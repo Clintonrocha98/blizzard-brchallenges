@@ -74,8 +74,8 @@ export function Header({ className }) {
                     <ButtonMenu></ButtonMenu>
                 </div>
             </header>
-            {menu && !esports ? <MenuGames></MenuGames> : <></>}
-            {esports && !menu ? <MenuEsports></MenuEsports> : <></>}
+            {menu && !esports ? <MenuGames></MenuGames> : null}
+            {esports && !menu ? <MenuEsports></MenuEsports> : null}
         </>
     );
 }

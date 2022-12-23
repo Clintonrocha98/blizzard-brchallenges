@@ -33,25 +33,19 @@ function ButtonMenu() {
         <>
             <button onClick={HandleClick} className={styles.buttonMenu}>
                 <div
-                    className={`${styles.line} ${
-                        btnMenu === true ? styles.line1 : ""
-                    }`}
+                    className={`${styles.line} ${btnMenu && styles.line1}`}
                 ></div>
                 <div
-                    className={`${styles.line} ${
-                        btnMenu === true ? styles.line2 : ""
-                    }`}
+                    className={`${styles.line} ${btnMenu && styles.line2}`}
                 ></div>
                 <div
-                    className={`${styles.line} ${
-                        btnMenu === true ? styles.line3 : ""
-                    }`}
+                    className={`${styles.line} ${btnMenu && styles.line3}`}
                 ></div>
             </button>
 
             <MenuClick
                 style={
-                    btnMenu === true ? { display: `flex` } : { display: `none` }
+                    btnMenu ? { display: `flex` } : { display: `none` }
                 }
             ></MenuClick>
         </>

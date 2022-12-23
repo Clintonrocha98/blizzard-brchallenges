@@ -15,13 +15,13 @@ function ButtonsHeader({ className }) {
                 >
                     Crir conta
                 </button>
-                {modalActive ? (
+                {modalActive && (
                     <ModalLoginPag
                         onClose={() => {
                             setModalon(false);
                         }}
                     ></ModalLoginPag>
-                ) : null}
+                )}
 
                 <button className={styles.logarBtn}>
                     <img

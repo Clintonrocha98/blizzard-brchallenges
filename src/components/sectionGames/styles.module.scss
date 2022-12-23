@@ -30,6 +30,13 @@
     .warrapIcons {
         display: flex;
         gap: 25px;
+        img {
+            transition: all 1s ease-in-out;
+        }
+        img:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
     }
 }
 .warrapGrid {

@@ -4,15 +4,29 @@
     width: 100%;
     height: 100vh;
 }
-
-main {
-    height: 100vh;
+.banner::after {
+    background: radial-gradient(
+        72.28% 72.28% at 52.36% 25.95%,
+        rgba(2, 2, 3, 0) 0%,
+        #020203 71.1%
+    );
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0.5;
 }
+
 .warrapMain {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
+    position: absolute;
+    inset: 0;
 }
 .left {
     display: flex;

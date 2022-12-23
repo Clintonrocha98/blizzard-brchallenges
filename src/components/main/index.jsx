@@ -19,11 +19,14 @@ export function Main({ className }) {
 
     return (
         <>
-            <div
-                className={styles.banner}
-                style={{ backgroundImage: `url(${gameContent.bg})` }}
-            >
-                <main className={className}>
+            <main>
+                <div
+                    className={styles.banner}
+                    style={{
+                        backgroundImage: `url(${gameContent.bg})`,
+                    }}
+                ></div>
+                <div className={`${className} ${styles.warrapMain}`}>
                     <div className={styles.warrapMain}>
                         <aside className={styles.left}>
                             <input
@@ -102,8 +105,8 @@ export function Main({ className }) {
                             </div>
                         </aside>
                     </div>
-                </main>
-            </div>
+                </div>
+            </main>
         </>
     );
 }

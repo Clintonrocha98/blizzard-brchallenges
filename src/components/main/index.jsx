@@ -8,10 +8,6 @@ export function Main({ className }) {
     function setContentMainSection(id) {
         if (id >= 3) return;
 
-        if (id === 1) setDiablo(true);
-        if (id === 2) setHearth(true);
-        if (id === 3) setWow(true);
-
         setGame(gameData[id]);
     }
     function mouseEnterInGif(e) {

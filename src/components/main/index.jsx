@@ -6,8 +6,6 @@ export function Main({ className }) {
     const [gameContent, setGame] = useState(gameData[0]);
 
     function setContentMainSection(id) {
-        if (id >= 3) return;
-
         setGame(gameData[id]);
     }
     function mouseEnterInGif(e) {
@@ -16,71 +14,55 @@ export function Main({ className }) {
     function mouseOutGif(e) {
         e.target.setAttribute("src", gameContent.static);
     }
+    function BackgroundGame({ bg }) {
+        const background = [
+            styles.bg1,
+            styles.bg2,
+            styles.bg3,
+            styles.bg4,
+            styles.bg5,
+        ];
+        return (
+            <>
+                <div
+                    className={`${styles.banner} ${background[bg]}`}
+                    loading="auto"
+                ></div>
+            </>
+        );
+    }
 
     return (
         <>
             <main>
-                <div
-                    className={styles.banner}
-                    style={{
-                        backgroundImage: `url(${gameContent.bg})`,
-                    }}
-                ></div>
+                <BackgroundGame bg={gameContent.id}></BackgroundGame>
+                <div className={` ${styles.backgroundBlizzard}`}></div>
                 <div className={`${className} ${styles.warrapMain}`}>
                     <div className={styles.warrapMain}>
                         <aside className={styles.left}>
-                            <input
-                                name="game"
-                                type="radio"
-                                id="diablo"
-                                defaultChecked
-                            />
-                            <label htmlFor="diablo">
-                                <img
-                                    src={gameData[0].icon}
-                                    key={gameData[0].id}
-                                    alt="icone do jogo"
-                                    onClick={() =>
-                                        setContentMainSection(gameData[0].id)
-                                    }
-                                />
-                            </label>
-
-                            <input name="game" type="radio" id="hearth" />
-                            <label htmlFor="hearth">
-                                <img
-                                    src={gameData[1].icon}
-                                    key={gameData[1].id}
-                                    alt="icone do jogo"
-                                    onClick={() =>
-                                        setContentMainSection(gameData[1].id)
-                                    }
-                                />
-                            </label>
-
-                            <input name="game" type="radio" id="wow" />
-                            <label htmlFor="wow">
-                                <img
-                                    src={gameData[2].icon}
-                                    key={gameData[2].id}
-                                    alt="icone do jogo"
-                                    onClick={() =>
-                                        setContentMainSection(gameData[2].id)
-                                    }
-                                />
-                            </label>
-
-                            <img
-                                src={gameData[3].icon}
-                                key={gameData[3].id}
-                                alt="icone do jogo"
-                            />
-                            <img
-                                src={gameData[4].icon}
-                                key={gameData[4].id}
-                                alt="icone do jogo"
-                            />
+                            {gameData.map((game) => (
+                                <div key={game.id}>
+                                    <input
+                                        name="game"
+                                        type="radio"
+                                        id={game.name}
+                                        defaultChecked={
+                                            game.id === 0 ? true : false
+                                        }
+                                    />
+                                    <label htmlFor={game.name}>
+                                        <img
+                                            src={game.icon}
+                                            alt={"icone do jogo " + game.name}
+                                            onClick={() =>
+                                                setContentMainSection(game.id)
+                                            }
+                                        />
+                                    </label>
+                                </div>
+                            ))}
                         </aside>
+
                         <div className={styles.warrapTitle}>
                             <h1>{gameContent.title}</h1>
                             <p>{gameContent.description}</p>

@@ -40,6 +40,7 @@
 .bg2 {
     background-image: url("../../assets/background/bg-hearthstone.webp");
 }
+
 .bg3 {
     background-image: url("../../assets/background/bg-lk.webp");
 }
@@ -176,6 +177,14 @@
         }
     }
 }
+@media (max-width: 800px) {
+    .bg2 {
+        background-position: 80%;
+    }
+    .bg3 {
+        background-position: 85%;
+    }
+}
 @media (max-width: 890px) {
     .left {
         position: absolute;
@@ -205,6 +214,14 @@
         display: none;
     }
 }
+@media (max-width: 550px) {
+    .bg5 {
+        background-position: 35%;
+    }
+    .bg3 {
+        background-position: 75%;
+    }
+}
 
 @media (max-width: 375px) {
     .left {
@@ -225,6 +242,7 @@
         }
     }
 }
+
 @keyframes BackgroundOpacity {
     to {
         opacity: 1;

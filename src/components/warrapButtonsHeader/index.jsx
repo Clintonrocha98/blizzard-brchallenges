@@ -15,6 +15,17 @@ function ButtonsHeader({ className }) {
                 >
                     Crir conta
                 </button>
+
+                <button
+                    className={styles.logarBtn}
+                    onClick={() => setModalon(true)}
+                >
+                    <img
+                        src={iconLogar}
+                        alt="icone do botão para entrar na conta"
+                    />
+                    Logar
+                </button>
                 {modalActive && (
                     <ModalLoginPag
                         onClose={() => {
@@ -22,14 +33,6 @@ function ButtonsHeader({ className }) {
                         }}
                     ></ModalLoginPag>
                 )}
-
-                <button className={styles.logarBtn}>
-                    <img
-                        src={iconLogar}
-                        alt="icone do botão para entrar na conta"
-                    />
-                    Logar
-                </button>
             </div>
         </>
     );
